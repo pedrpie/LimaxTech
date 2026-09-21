@@ -5,11 +5,11 @@ const STORAGE_KEY = 'theme'
 function getInitialTheme() {
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY)
-    return saved === 'dark' ? 'dark' : 'light'
+    return saved === 'light' ? 'light' : 'dark'
   } catch {
     // localStorage pode estar bloqueado (modo privado, restrições do navegador) —
     // nesse caso o site simplesmente sempre abre no tema claro.
-    return 'light'
+    return 'dark'
   }
 }
 
