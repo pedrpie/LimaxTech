@@ -12,7 +12,7 @@ export default function App() {
   return (
     <>
       <Nav theme={theme} onToggleTheme={toggleTheme} />
-      <main className="wrap">
+      <main className="wrap blocks-container">
         <Hero />
         <Sobre />
         <Ferramentas />

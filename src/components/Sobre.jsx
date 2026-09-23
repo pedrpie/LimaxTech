@@ -26,14 +26,16 @@ const VALUE_ICON_PATHS = {
 
 export default function Sobre() {
   return (
-    <section id="sobre">
-      <Reveal as="p" className="kicker">
-        Sobre
-      </Reveal>
-      <Reveal as="h2">A Limax Tech</Reveal>
+    <section id="sobre" className="topic-block sobre-block">
+      <div className="topic-header">
+        <Reveal as="span" className="topic-tag">
+          01 // SOBRE
+        </Reveal>
+        <Reveal as="h2">A Limax Tech</Reveal>
+      </div>
 
       <div className="sobre-grid">
-        <Reveal>
+        <Reveal className="sobre-story">
           <p>
             <strong>Limax Tech</strong> é o nome por trás do trabalho de Pedro Costa, natural
             de Natal, Rio Grande do Norte, dedicado a aprender a construir sites do começo ao fim.
@@ -49,25 +51,27 @@ export default function Sobre() {
           </p>
         </Reveal>
 
-        <Reveal as="ul" className="values-list" delay=".1s">
+        <Reveal as="div" className="values-grid" delay=".1s">
           {VALUES.map((value) => (
-            <li key={value.id}>
-              <svg
-                className="v-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                {VALUE_ICON_PATHS[value.id]}
-              </svg>
-              <div>
+            <div key={value.id} className="value-card">
+              <div className="v-icon-wrapper">
+                <svg
+                  className="v-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  {VALUE_ICON_PATHS[value.id]}
+                </svg>
+              </div>
+              <div className="v-content">
                 <div className="v-title">{value.title}</div>
                 <div className="v-desc">{value.description}</div>
               </div>
-            </li>
+            </div>
           ))}
         </Reveal>
       </div>

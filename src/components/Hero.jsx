@@ -6,7 +6,7 @@ export default function Hero() {
   const { displayedText, isDone } = useTypewriter(TAGLINE, { startDelay: 300 })
 
   return (
-    <section className="hero" style={{ borderTop: 'none' }}>
+    <section id="hero" className="topic-block hero-block">
       <div className="hero-dots" aria-hidden="true" />
       <div className="hero-grid">
         <div>
@@ -39,18 +39,18 @@ export default function Hero() {
               Ver GitHub
             </a>
           </div>
-
-          <div className="hero-facts">
-            {HERO_FACTS.map((fact) => (
-              <div key={fact.id}>
-                <div className="fact-title">{fact.title}</div>
-                <div className="fact-desc">{fact.description}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         <Terminal lines={TERMINAL_LINES} />
+      </div>
+
+      <div className="hero-facts-grid">
+        {HERO_FACTS.map((fact) => (
+          <div key={fact.id} className="hero-fact-card">
+            <div className="fact-title">{fact.title}</div>
+            <div className="fact-desc">{fact.description}</div>
+          </div>
+        ))}
       </div>
     </section>
   )

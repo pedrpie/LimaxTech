@@ -5,7 +5,7 @@ export default function Nav({ theme, onToggleTheme }) {
   return (
     <header className="nav">
       <div className="nav-inner">
-        <div className="nav-name">Limax Tech</div>
+        <a href="#hero" className="nav-name">Limax Tech</a>
         <div className="nav-right">
           <ul className="nav-links">
             {NAV_LINKS.map((link) => (
